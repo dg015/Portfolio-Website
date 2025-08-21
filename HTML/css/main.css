@@ -1,0 +1,359 @@
+body {
+    margin: 0;
+    background-color: #191919;
+}
+
+
+header {
+    position: relative;
+    top: 0;
+    z-index: 1000;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+    background-color: #333;
+    border-bottom: 1px solid darkgray;
+    font-size: larger;
+    padding: 2vw 4vw;
+    
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+.headerRight {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.headerIcon {
+    width: 35px;
+    height: auto;
+}
+
+.headerLeft a:hover,
+.headerRight img:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+
+.headerCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: xx-large;
+    white-space: nowrap;
+    /* Prevent line break */
+}
+
+.headerCenter a {
+    color: white;
+    text-decoration: none;
+    outline: none;
+    /* if you want to remove default focus outline */
+}
+
+.headerLeft {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-size: 150%;
+}
+
+
+.headerLeft a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Submenu - hidden by default */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Submenu link styles */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Show submenu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: change “Works” color on hover */
+.dropdown:hover .dropbtn {
+    color: #ddd;
+}
+
+.welcome-section {
+    padding-top: 60px;
+    position: relative;
+    background: url("../Sources/Cover.jpg") center/cover no-repeat;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    /* Stack text vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically if you want */
+    height: 60vh;
+    /* Take 60% of viewport height */
+    color: white;
+    text-align: center;
+    font-family: Georgia, serif;
+    gap: 0.5rem;
+    /* Space between h1 and p */
+}
+
+.welcome-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.welcome-section>* {
+    position: relative;
+    z-index: 1;
+}
+
+.welcome-section h1 {
+    font-size: 5rem;
+    /* Big main text */
+    margin: 0;
+}
+
+.welcome-section p {
+    font-size: 1.5rem;
+    /* Smaller subtitle */
+    margin: 0;
+    opacity: 0.8;
+    /* Slightly faded */
+}
+
+.container {
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.container a {
+    text-decoration: none;
+    outline: none;
+}
+
+.projectBoxesLink {
+    display: block;
+    /* make the <a> behave like a block so it fills the section */
+    color: inherit;
+    /* preserve text color */
+    text-decoration: none;
+    /* remove underline */
+}
+
+.projectBoxes {
+    display: flex;
+    width: 60vw;
+    height: 20vw;
+    background-color: #333;
+    box-sizing: border-box;
+    margin: 50px auto;
+    padding: 2px;
+    flex-direction: row;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.projectBoxes::after {
+    content: '';
+    display: block;
+    background-color: transparent;
+    opacity: .8;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    transform: scale(2) translate(-65%, -65%) rotate(45deg);
+    transition: transform 1.2s ease, background-color 0.8s ease;
+}
+
+.projectBoxes:hover::after {
+    transform: scale(2) translateX(0) translateY(0);
+    background-color: #d1d1d1;
+}
+
+
+.projectBoxesText {
+    width: 20vw;
+    height: 20vw;
+    background-color: #5c5c5c;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.projectBoxesText h1 {
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-weight: bold;
+    word-wrap: break-word;
+    margin: 0;
+
+}
+
+.projectBoxesImage {
+    width: 40vw;
+    height: 20vw;
+}
+
+.projectBoxesImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* keeps image aspect ratio, fills container */
+    border-radius: 4px;
+    /* optional rounded corners */
+}
+
+.projectBoxes .projectBoxesHovertext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    color: black;
+
+    transform: translateY(-30px);
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out;
+    transition-delay: .5s;
+
+}
+
+.projectBoxes:hover .projectBoxesHovertext {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+footer {
+    border-top: 1px #555;
+
+}
+
+.footerLine {
+    height: 1px;
+    background-color: #555;
+
+    margin-bottom: 20px;
+    max-width: 80vw;
+    margin: 0 auto 20px auto;
+}
+
+
+.footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(128, 128, 128);
+    font-weight: bold;
+
+    font-family: Georgia, serif;
+}
+
+@media screen and (max-width: 530px) {
+    .headerCenter {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 100%;
+        white-space: nowrap;
+        /* Prevent line break */
+    }
+
+    .headerRight {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .headerIcon {
+        width: 20px;
+        height: auto;
+    }
+
+    .headerLeft a:hover,
+    .headerRight img:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        transition: opacity 0.3s ease;
+    }
+
+    .headerLeft {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        font-size: 85%;
+    }
+
+
+}
