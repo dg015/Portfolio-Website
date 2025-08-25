@@ -3,6 +3,8 @@ body {
 
 }
 
+
+
 .image-grid {
     --gap: 16px;
     --num-cols: 4;
@@ -79,6 +81,15 @@ body {
     z-index: 2;
 }
 
+
+.text-block {
+  max-width: 800px;    /* keeps the text from being too wide */
+  margin: 0 auto;      /* centers the block */
+  padding: 0 20px;     /* adds space on left and right */
+  color: white;        /* white text */
+  font-size: 1.1rem;   /* readable font size */
+  line-height: 1.6;    /* good line spacing */
+}
 
 @media screen and (max-width: 1024px) {
     .image-grid {
