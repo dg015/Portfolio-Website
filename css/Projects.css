@@ -24,6 +24,7 @@ body {
 .image-grid img {
     opacity: 1.0;
     cursor: pointer;
+	max-height: 200px;
 }
 
 .image-grid img:hover {
@@ -94,7 +95,7 @@ body {
 @media screen and (max-width: 1024px) {
     .image-grid {
         --num-cols: 2;
-        --row-height: 200px;
+        --row-height: 220px;
 
     }
 
