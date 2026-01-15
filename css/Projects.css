@@ -21,6 +21,12 @@ body {
 
 }
 
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
 .image-grid img {
     opacity: 1.0;
     cursor: pointer;
